@@ -22,13 +22,13 @@ private static char nuc;
     }
     
     @Before
-    public static void setUpClass() {
+    public void setUpClass() {
     seq = new DNASequence ("ACTG");
     nuc = 'A';
     }
     
     @After
-    public static void tearDownClass() {
+    public void tearDownClass() {
     seq = null;
     }
 
