@@ -5,26 +5,31 @@
  */
 package dnasequence;
 
-import org.junit.AfterClass;
-import org.junit.BeforeClass;
+
+import org.junit.After;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import org.junit.Before;
 
 /**
  *
  * @author azaha
  */
 public class DNASequenceTest {
-    
+private static DNASequence seq;
+private static char nuc;
     public DNASequenceTest() {
     }
     
-    @BeforeClass
+    @Before
     public static void setUpClass() {
+    seq = new DNASequence ("ACTG");
+    nuc = 'A';
     }
     
-    @AfterClass
+    @After
     public static void tearDownClass() {
+    seq = null;
     }
 
     /**
@@ -33,12 +38,10 @@ public class DNASequenceTest {
     @Test
     public void testIsValid() {
         System.out.println("isValid");
-        DNASequence instance = null;
-        boolean expResult = false;
+        DNASequence instance = seq;
+        boolean expResult = true;
         boolean result = instance.isValid();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -47,13 +50,11 @@ public class DNASequenceTest {
     @Test
     public void testCount() {
         System.out.println("count");
-        char nucleotide = ' ';
-        DNASequence instance = null;
-        int expResult = 0;
+        char nucleotide = nuc;
+        DNASequence instance = seq;
+        int expResult = 1;
         int result = instance.count(nucleotide);
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
     
 }
