@@ -23,7 +23,7 @@ private static char nuc;
     
     @Before
     public void setUpClass() {
-    seq = new DNASequence ("ACTG");
+    seq = new DNASequence ("CGAT");
     nuc = 'A';
     }
     
