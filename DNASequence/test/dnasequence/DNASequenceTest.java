@@ -70,20 +70,21 @@ private static char nuc4;
         char CYTOSINE = nuc2;
         char THYMINE = nuc3;
         char GUANINE = nuc4;
-        DNASequence instance = seq;
-        int expResult = 1;
+        DNASequence instance = seq2;
+        int expResult1 = 1;
+        int expResult2 = 0;
         int result1 = instance.count(ADENINE);
         int result2 = instance.count(CYTOSINE);
         int result3 = instance.count(THYMINE);
         int result4 = instance.count(GUANINE);
-        System.out.println("Test1:\n    Resultado esperado: "+expResult+" -- Resultado Obtenido: "+result1);
-        System.out.println("Test2:\n    Resultado esperado: "+expResult+" -- Resultado Obtenido: "+result2);
-        System.out.println("Test3:\n    Resultado esperado: "+expResult+" -- Resultado Obtenido: "+result3);
-        System.out.println("Test4:\n    Resultado esperado: "+expResult+" -- Resultado Obtenido: "+result4+"\n");
-        assertEquals(expResult, result1);
-        assertEquals(expResult, result2);
-        assertEquals(expResult, result3);
-        assertEquals(expResult, result4);
+        System.out.println("Test1:\n    Resultado esperado: "+expResult2+" -- Resultado Obtenido: "+result1);
+        System.out.println("Test2:\n    Resultado esperado: "+expResult1+" -- Resultado Obtenido: "+result2);
+        System.out.println("Test3:\n    Resultado esperado: "+expResult1+" -- Resultado Obtenido: "+result3);
+        System.out.println("Test4:\n    Resultado esperado: "+expResult1+" -- Resultado Obtenido: "+result4+"\n");
+        assertEquals(expResult2, result1);
+        assertEquals(expResult1, result2);
+        assertEquals(expResult1, result3);
+        assertEquals(expResult1, result4);
     }
     
 }
