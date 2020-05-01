@@ -17,6 +17,7 @@ import org.junit.Before;
  */
 public class DNASequenceTest {
 private static DNASequence seq;
+private static DNASequence seq2;
 private static char nuc;
     public DNASequenceTest() {
     }
@@ -24,6 +25,7 @@ private static char nuc;
     @Before
     public void setUpClass() {
     seq = new DNASequence ("CGAT");
+    seq2 = new DNASequence ("CGTZ");
     nuc = 'A';
     }
     
@@ -39,9 +41,13 @@ private static char nuc;
     public void testIsValid() {
         System.out.println("isValid");
         DNASequence instance = seq;
+        DNASequence instance2 = seq2;
         boolean expResult = true;
+        boolean expResult2 = false;
         boolean result = instance.isValid();
+        boolean result2 = instance2.isValid();
         assertEquals(expResult, result);
+        assertEquals(expResult2, result2);
     }
 
     /**
