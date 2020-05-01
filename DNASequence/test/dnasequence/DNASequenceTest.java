@@ -33,6 +33,7 @@ private static char nuc;
     @After
     public void tearDownClass() {
     seq = null;
+    seq2 = null;
     }
 
     /**
