@@ -18,6 +18,7 @@ import org.junit.Before;
 public class DNASequenceTest {
 private static DNASequence seq;
 private static char nuc;
+
     public DNASequenceTest() {
     }
     
