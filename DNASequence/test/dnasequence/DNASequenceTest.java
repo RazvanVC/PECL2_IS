@@ -17,14 +17,21 @@ import org.junit.Before;
  */
 public class DNASequenceTest {
 private static DNASequence seq;
-private static char nuc;
+private static char nuc1;
+private static char nuc2;
+private static char nuc3;
+private static char nuc4;
+
     public DNASequenceTest() {
     }
     
     @Before
     public void setUpClass() {
     seq = new DNASequence ("ACTG");
-    nuc = 'A';
+    nuc1 = 'A';
+    nuc2 = 'C';
+    nuc3 = 'T';
+    nuc4 = 'G';
     }
     
     @After
@@ -50,7 +57,7 @@ private static char nuc;
     @Test
     public void testCount() {
         System.out.println("count");
-        char nucleotide = nuc;
+        char nucleotide = nuc1;
         DNASequence instance = seq;
         int expResult = 1;
         int result = instance.count(nucleotide);
