@@ -11,4 +11,9 @@ package Ejercicio_2_ResolucionEasyMock;
  */
 public interface GestorPrestamosPersonales {
     
+    public boolean CantidadValida(int Cantidad);
+    public boolean TiempoValido(int meses);
+    public boolean PrestamosRecientes();
+    
+    public void RealizarPrestamo(double Cantidad, int meses);
 }
