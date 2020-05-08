@@ -48,7 +48,7 @@ public class DNASequenceTest {
      */
     @Test
     public void testIsValid01() {
-        System.out.println("Test: isValid");
+        System.out.println("Test: isValid 1");
         DNASequence instance = seq;
         DNASequence instance2 = seq2;
         boolean expResult = true;
@@ -62,7 +62,7 @@ public class DNASequenceTest {
      */
     @Test
     public void testIsValid02() {
-        System.out.println("Test: isValid");
+        System.out.println("Test: isValid 2");
         DNASequence instance = seq;
         DNASequence instance2 = seq2;
         boolean expResult = false;
@@ -75,27 +75,42 @@ public class DNASequenceTest {
      * Test of count method, of class DNASequence.
      */
     @Test
-    public void testCount() {
-        System.out.println("Test: count");
-        char ADENINE = nuc1;
-        char CYTOSINE = nuc2;
-        char THYMINE = nuc3;
-        char GUANINE = nuc4;
+    public void testCount01() {
+        System.out.println("Test: count 1");
+        char ADENINE = nuc1;       
         DNASequence instance = seq2;
-        int expResult1 = 1;
         int expResult2 = 0;
         int result1 = instance.count(ADENINE);
-        int result2 = instance.count(CYTOSINE);
-        int result3 = instance.count(THYMINE);
-        int result4 = instance.count(GUANINE);
-        System.out.println("Test1:\n    Resultado esperado: " + expResult2 + " -- Resultado Obtenido: " + result1);
-        System.out.println("Test2:\n    Resultado esperado: " + expResult1 + " -- Resultado Obtenido: " + result2);
-        System.out.println("Test3:\n    Resultado esperado: " + expResult1 + " -- Resultado Obtenido: " + result3);
-        System.out.println("Test4:\n    Resultado esperado: " + expResult1 + " -- Resultado Obtenido: " + result4 + "\n");
+        System.out.println("Test1:\n    Resultado esperado: " + expResult2 + " -- Resultado Obtenido: " + result1 + "\n");
         assertEquals(expResult2, result1);
-        assertEquals(expResult1, result2);
-        assertEquals(expResult1, result3);
-        assertEquals(expResult1, result4);
-    }
 
+    }
+    
+    public void testCount02() {
+        System.out.println("Test: count 2");
+        char CYTOSINE = nuc2;
+        DNASequence instance = seq2;
+        int expResult = 1;
+        int result2 = instance.count(CYTOSINE);
+        System.out.println("Test2:\n    Resultado esperado: " + expResult + " -- Resultado Obtenido: " + result2 + "\n");
+        assertEquals(expResult, result2);
+    }
+    public void testCount03() {
+        System.out.println("Test: count 3");
+        char THYMINE = nuc3;
+        DNASequence instance = seq2;
+        int expResult = 1;
+        int result3 = instance.count(THYMINE);
+        System.out.println("Test3:\n    Resultado esperado: " + expResult + " -- Resultado Obtenido: " + result3 + "\n");
+        assertEquals(expResult, result3);
+    }
+    public void testCount04() {
+        System.out.println("Test: count 4");
+        char GUANINE = nuc4;
+        DNASequence instance = seq2;
+        int expResult = 1;
+        int result4 = instance.count(GUANINE);
+        System.out.println("Test4:\n    Resultado esperado: " + expResult + " -- Resultado Obtenido: " + result4 + "\n");
+        assertEquals(expResult, result4);
+    }
 }
