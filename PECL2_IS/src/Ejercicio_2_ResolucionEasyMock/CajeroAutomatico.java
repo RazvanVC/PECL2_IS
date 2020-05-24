@@ -45,20 +45,16 @@ public class CajeroAutomatico {
         }
         return false;
     }
-    public boolean realizarPrestamoPersonal(GestorPrestamosPersonales g, int Cantidad, int meses) {           
-        assert(_cuenta != null );
-       
-        if (g.PrestamosRecientes())          
-           return false;
-    
-        if(g.CantidadValida(Cantidad)){
-            if(g.TiempoValido(meses)){
-                g.RealizarPrestamo(Cantidad, meses);
-                return true;
-            }else
-                return false;
+
+    public boolean realizarPrestamoPersonal(GestorPrestamosPersonales g, int Cantidad, int meses) {
+        assert (_cuenta != null);
+        boolean variableRetornada = false;
+
+        if (g.CantidadValida(Cantidad) && g.TiempoValido(meses) && !g.PrestamosRecientes()) {
+            g.RealizarPrestamo(Cantidad, meses);
+
+            variableRetornada = true;
         }
-        else
-            return false;
+        return variableRetornada;
     }
 }
